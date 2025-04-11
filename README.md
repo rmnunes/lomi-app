@@ -1,54 +1,25 @@
-# React + TypeScript + Vite
+# Skill Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Link
+https://lomi-beta.vercel.app/
 
-Currently, two official plugins are available:
+## Task
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Update the existing Connect Wallet functionality to:
 
-## Expanding the ESLint configuration
+1. Detect whether Metamask (or any Ethereum provider) is installed.
+2. If Metamask is NOT installed, display a clear alert:
+   "No Metamask detected. Please install Metamask to continue."
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Requirements
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Use React + Web3.js or Ethers.js
+2. Assume Metamask is the primary wallet
+3. Keep UI simple – no design needed
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Success Criteria
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Clear Metamask detection
+2. Proper alerting and validation
+3. Clean code (preferably in a single file or small component)
+4. Optional: error handling, UI polish.
